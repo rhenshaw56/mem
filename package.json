@@ -4,6 +4,7 @@
   "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
   "license": "MIT",
   "repository": "sindresorhus/mem",
+  "main": "bundle.js",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -13,7 +14,8 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "build": "babel index.js --out-file bundle.js"
   },
   "files": [
     "index.js"
@@ -37,6 +39,8 @@
   },
   "devDependencies": {
     "ava": "*",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "delay": "^2.0.0",
     "xo": "*"
   }
